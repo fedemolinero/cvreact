@@ -4,6 +4,15 @@
     padding-bottom: 30px;
     border-bottom: 2px solid black;
     text-align: center;
-    max-height: 600px;
-    height: 200px;
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.Body-section {
+    background-color: lightslategrey;
+    padding: 30px;
 }

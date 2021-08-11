@@ -4,4 +4,21 @@
     padding-bottom: 30px;
     border-bottom: 2px solid black;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Header-title {
+    background-color: green;
+    padding: 10px;
+  }
+
+  .Header-photo {
+    background-color: blue;
+    padding: 10px;
+  }
+
+  .Header-freetext {
+    background-color: yellow;
+    padding: 10px;
   }

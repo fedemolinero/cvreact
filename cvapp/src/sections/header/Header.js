@@ -3,7 +3,19 @@ import './Header.css';
 function Header() {
   return (
     <div className="Header">
-      My CV in React
+
+      <div className="Header-photo">
+        photo here
+      </div>
+
+      <div className="Header-title">
+        My CV in React
+      </div>
+
+      <div className="Header-freetext">
+        photo here
+      </div>
+
     </div>
   );
 }
