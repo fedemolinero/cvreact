@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      THIS IS THE APP PART
+      My CV React App
     </div>
   );
 }

@@ -1,18 +1,92 @@
 .Body {
-    background-color: lightgrey;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-bottom: 2px solid black;
-    text-align: center;
+    background-color: #e2ece9;
     min-height: 300px;
-
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
 }
 
-.Body-section {
-    background-color: lightslategrey;
+.Body-section-left {
+    width: 30%;
+    border: 5px solid white;
+    color: white;
+    background-color: #011740bd;
+}
+
+.Body-section-right {
+    width: 70%;
+    border: 5px solid white;
+}
+
+.photo {
+    background-color: rgb(96, 96, 153);
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
     padding: 30px;
+    margin: 10% 10px 10px 10px;
+    text-align: center;
+    background-image: url(./logo.png);
+}
+
+.photo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-title-wrapper {
+    background-color: lightgray;
+    height: 150px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.content-wrapper {
+    padding: 10px;
+    margin: 10px;
+}
+
+.name-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.summary-title {
+    font-weight: bold;
+}
+
+.separator {
+    border-bottom: 1px solid black;
+    margin-right: 30%;
+    margin-left: 30%;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.separator-left {
+    border-bottom: 1px solid black;
+    width: 15%;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.name-subtitle {
+    font-size: 18px;
+    color: darkgray;
+}
+
+.work-experience-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

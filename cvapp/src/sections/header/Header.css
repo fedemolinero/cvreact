@@ -1,16 +1,19 @@
-.Header {
-    background-color: lightslategray;
-    padding-top: 30px;
-    padding-bottom: 30px;
+  .Header {
     border-bottom: 2px solid black;
+  }
+
+  .Header-wrapper {
+    background-color: lightslategray;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
     display: flex;
     justify-content: space-between;
   }
 
   .Header-title {
-    background-color: green;
-    padding: 10px;
+    padding: 5px;
+    text-align: center;
   }
 
   .Header-photo {
