@@ -1,6 +1,9 @@
 import './InfoCard.css';
+import React, { useState } from 'react';
+
 
 function InfoCard(props) {
+
   const content = 'This is what i DoThis is what i DoThis is what i DoThis is Lore IpsumDoThis is Lore Ipsum  iDoThis is Lore Ipsum  DoThisDoThis is Lore Ipsum  what DoThisDoThis is Lore Ipsum  what DoThisDoThis is Lore Ipsum  what DoThis is what i DoThis is what i DoThis is what i DoThis is what i DoThis is what i DoThis is what i DoThis is what i DoThis is what i Do';
   // const data = [
   //   {
@@ -17,9 +20,24 @@ function InfoCard(props) {
   //   }
   // ];
 
+  const [enteredTitle, setEnteredTitle] = useState('')
+
+  const cambiaTitulo = (event) => {
+    // console.log('cambia', event.target.value)
+    setEnteredTitle(event.target.value)
+  }
+
   return (
 
     <div className="InfoCard">
+
+      <form>
+        <input type="text" onChange={cambiaTitulo}></input>
+      </form>
+
+      <div>
+        {enteredTitle}
+      </div>
 
       {(props.title != null) && <div className="InfoCard-title">{props.title}</div>}
 

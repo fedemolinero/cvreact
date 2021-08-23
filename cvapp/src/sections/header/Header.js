@@ -1,26 +1,23 @@
+import React, { useState } from 'react';
 import './Header.css';
 
-function Header() {
+const Header = (props) => {
+
+  const [title, setTitle] = useState(props.title);
+
+  const clickHandler = () => {
+    setTitle('BUTTON CLICKED');
+    console.log(title);
+  }
+
   return (
     <div className="Header">
-      {/* 
-      <div className="Header-title">
-        <h2>List Options Here</h2>
-      </div> */}
-      {/* 
       <div className="Header-wrapper">
-
-        <div className="Header-photo">
-          photo here
-        </div>
-
-        <div className="Header-freetext">
-          free text
-        </div>
-
-      </div> */}
-
-
+        <h1>{title}</h1>
+        <button onClick={clickHandler}>
+          CLICK ME
+        </button>
+      </div>
     </div>
   );
 }

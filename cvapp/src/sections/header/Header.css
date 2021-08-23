@@ -3,25 +3,5 @@
   }
 
   .Header-wrapper {
-    background-color: lightslategray;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .Header-title {
-    padding: 5px;
-    text-align: center;
-  }
-
-  .Header-photo {
-    background-color: blue;
-    padding: 10px;
-  }
-
-  .Header-freetext {
-    background-color: yellow;
     padding: 10px;
   }
