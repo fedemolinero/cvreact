@@ -1,28 +1,21 @@
 import './Body.css';
-import Sidebar from './sidebar/Sidebar';
+import InfoCard from '../../shared/components/sidebar/InfoCard';
+import Button from '@material-ui/core/Button';
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import PersonPinCircleIcon from '@material-ui/icons/PersonPinCircle';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import FaceIcon from '@material-ui/icons/Face';
 
 function Body() {
-
-  const data = [
-    {
-      id: 1,
-      title: 'Habilidad 1',
-      subtitle: 'Carpinteria',
-      amount: 5
-    },
-    {
-      id: 2,
-      title: 'Habilidad 2',
-      subtitle: 'Programacion',
-      amount: 2
-    }
-  ];
 
   return (
     <div className="Body">
       <div className="Body-section-left">
+
+
         <div className="photo-wrapper">
           <div className="photo">
+            <FaceIcon className="FaceIconClass" />
           </div>
         </div>
 
@@ -33,10 +26,34 @@ function Body() {
           </div>
           <div className="separator-left"></div>
           <div className="summary-content">
-            <p>info@mymail</p>
-            <p>City</p>
-            <p>Etc</p>
-            <p>LKdin</p>
+            <div>
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<AlternateEmailIcon />}
+              >
+                mymail@myprovider.com.ar
+              </Button>
+            </div>
+            <div>
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<PersonPinCircleIcon />}
+              >
+                My City, Santa Fe. Argentina
+              </Button>
+            </div>
+            <div>
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<LinkedInIcon />}
+              >
+                linkedin/fedemolinero
+              </Button>
+            </div>
+
           </div>
         </div>
 
@@ -46,8 +63,15 @@ function Body() {
           </div>
           <div className="separator-left"></div>
           <div className="summary-content">
-            <p>BAR SKILLS HERE ------+++</p>
-            <p>BAR SKILLS HERE ------+++</p>
+            <div>
+              BAR SKILLS
+            </div>
+            <div>
+              BAR SKILLS 2
+            </div>
+            <div>
+              BAR SKILLS 3
+            </div>
           </div>
         </div>
 
@@ -57,21 +81,15 @@ function Body() {
           </div>
           <div className="separator-left"></div>
           <div className="summary-content">
-            <p>DOTBAR HERE ------+++</p>
-            <p>DOTBAR HERE ---++++++</p>
+            <div>
+              SPANISH
+            </div>
+            <div>
+              ENGLISH
+            </div>
           </div>
         </div>
 
-        {/* <Sidebar
-          title={data[0].title}
-          subtitle={data[0].subtitle}
-        >
-        </Sidebar>
-        <Sidebar
-          title={data[1].title}
-          subtitle={data[1].subtitle}
-        >
-        </Sidebar> */}
       </div>
 
       <div className="Body-section-right">
@@ -86,49 +104,16 @@ function Body() {
           </div>
         </div>
 
-
         <div className="content-wrapper">
-          <div className="summary-title">
-            SUMMARY
-          </div>
-          <div className="separator-left"></div>
-
-          <div className="work-experience-wrapper">
-
-            <div className="work-experience-place">
-              Support Administrative
-            </div>
-            <div className="work-experience-time">
-              9 jul 2020 - 9 ago 2021
-            </div>
-
-          </div>
-
-          <div className="work-experience-subtitle">
-            This is what i Do
-          </div>
-
-        </div>
-
-
-        <div className="content-wrapper">
-          <div className="summary-title">
-            EXPERIENCE
-          </div>
-          <div className="separator-left"></div>
-          <div className="summary-content">
-            Text content lorem ipsum
-          </div>
+          <InfoCard title="SUMMARY" />
         </div>
 
         <div className="content-wrapper">
-          <div className="summary-title">
-            EDUCATION
-          </div>
-          <div className="separator-left"></div>
-          <div className="summary-content">
-            Text content lorem ipsum
-          </div>
+          <InfoCard title="EXPERIENCE" subtitle="Support Administrative" startDate="09/07/2020" endDate="10/10/2021" />
+        </div>
+
+        <div className="content-wrapper">
+          <InfoCard title="EDUCATION" subtitle="University Degree" startDate="11/01/2020" endDate="20/09/2021" />
         </div>
 
       </div>
