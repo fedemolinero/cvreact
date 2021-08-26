@@ -27,12 +27,24 @@ function InfoCard(props) {
     setEnteredTitle(event.target.value)
   }
 
+
+  const submitFormHandler = (event) => {
+    event.preventDefault();
+
+    const expenseData = {
+      title: enteredTitle,
+    };
+
+    props.onSaveDataForm(expenseData);
+    setEnteredTitle('NEW');
+  };
+
   return (
 
     <div className="InfoCard">
 
-      <form>
-        <input type="text" onChange={cambiaTitulo}></input>
+      <form onSubmit={submitFormHandler}>
+        <input type="text" onChange={cambiaTitulo} />
       </form>
 
       <div>

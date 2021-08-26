@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import './Body.css';
-import InfoCard from '../../shared/components/sidebar/InfoCard';
+// components
+import InfoCard from '../../shared/components/infocard/InfoCard';
 import Button from '@material-ui/core/Button';
+
+// icons
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import PersonPinCircleIcon from '@material-ui/icons/PersonPinCircle';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FaceIcon from '@material-ui/icons/Face';
 
-
-
-function Body() {
+function Body(props) {
 
   const [enteredFullName, setEnteredFullName] = useState('YOUR NAME');
   const [enteredSubtitle, setEnteredSubtitle] = useState('your subtitle or slogan');
@@ -21,6 +22,15 @@ function Body() {
   const subtitleChanger = (event) => {
     setEnteredSubtitle(event.target.value.toString().toLowerCase())
   }
+
+  const saveFormDataHandler = (enteredData) => {
+    const dataForm = {
+      ...enteredData,
+      id: Math.random().toString()
+    };
+    props.onAddDataOnForm(dataForm);
+  };
+
 
   return (
     <div className="Body">
@@ -136,7 +146,7 @@ function Body() {
           </div>
 
           <div className="content-wrapper">
-            <InfoCard title="SUMMARY" />
+            <InfoCard onSaveDataForm={saveFormDataHandler} title="SUMMARY" />
           </div>
 
           <div className="content-wrapper">
