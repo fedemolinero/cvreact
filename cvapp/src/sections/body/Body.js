@@ -66,7 +66,7 @@ function Body(props) {
             </div>
             <div className="separator-left"></div>
             <div className="summary-content">
-              <div>
+              <div className="button-container">
                 <Button
                   variant="contained"
                   color="primary"
@@ -75,7 +75,7 @@ function Body(props) {
                   mymail@myprovider.com.ar
                 </Button>
               </div>
-              <div>
+              <div className="button-container">
                 <Button
                   variant="contained"
                   color="primary"
@@ -84,7 +84,7 @@ function Body(props) {
                   My City, Santa Fe. Argentina
                 </Button>
               </div>
-              <div>
+              <div className="button-container">
                 <Button
                   variant="contained"
                   color="primary"
